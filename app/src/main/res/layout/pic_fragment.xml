@@ -4,6 +4,8 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:background="@drawable/bg_rect"
+              android:paddingLeft="20dp"
+              android:paddingRight="20dp"
     >
 
     <ImageView

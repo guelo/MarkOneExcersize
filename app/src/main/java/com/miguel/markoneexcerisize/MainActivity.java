@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBarActivity;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -24,6 +25,9 @@ public class MainActivity extends ActionBarActivity {
 						getSupportFragmentManager());
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mDemoCollectionPagerAdapter);
+		int margin = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 20 * 2, getResources().getDisplayMetrics());
+		mViewPager.setPageMargin(-margin);
+		mViewPager.setCurrentItem(1);
 
 	}
 
@@ -46,7 +50,7 @@ public class MainActivity extends ActionBarActivity {
 
 		@Override
 		public int getCount() {
-			return 100;
+			return 3;
 		}
 
 		@Override
