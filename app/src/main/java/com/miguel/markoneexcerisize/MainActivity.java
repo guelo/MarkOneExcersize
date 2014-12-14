@@ -32,12 +32,14 @@ public class MainActivity extends ActionBarActivity {
 			super(fm);
 		}
 
+		int[] imageIds = {R.drawable.circle_fill, R.drawable.rect_fill, R.drawable.triangle_fill};
+
 		@Override
 		public Fragment getItem(int i) {
 			Fragment fragment = new DemoObjectFragment();
 			Bundle args = new Bundle();
 			// Our object is just an integer :-P
-			args.putInt(DemoObjectFragment.ARG_OBJECT, i + 1);
+			args.putInt(DemoObjectFragment.ARG_IMAGE, imageIds[i]);
 			fragment.setArguments(args);
 			return fragment;
 		}

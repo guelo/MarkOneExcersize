@@ -5,10 +5,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 public class DemoObjectFragment extends Fragment {
-	public static final String ARG_OBJECT = "object";
+	public static final String ARG_IMAGE = "object";
 
 	@Override
 	public View onCreateView(LayoutInflater inflater,
@@ -17,9 +17,9 @@ public class DemoObjectFragment extends Fragment {
 		// properly.
 		View rootView = inflater.inflate(
 				R.layout.pic_fragment, container, false);
-		Bundle args = getArguments();
-		((TextView) rootView.findViewById(R.id.text1)).setText(
-				Integer.toString(args.getInt(ARG_OBJECT)));
+
+		((ImageView) rootView.findViewById(R.id.image)).setImageResource(getArguments().getInt(ARG_IMAGE));
+
 		return rootView;
 	}
 }
